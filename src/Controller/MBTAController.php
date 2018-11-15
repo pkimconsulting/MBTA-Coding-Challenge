@@ -113,7 +113,7 @@ class MBTAController extends ControllerBase {
       $stop_map[$stop->id] = $stop->attributes->name; 
     }
 
-    / Populate each stop table with schedule
+    // Populate each stop table with schedule
     foreach($schedules->data as $n => $schedule) {
       $build["table-$route-" . $schedule->relationships->stop->data->id][$schedule->id]['stop']['#plain_text'] = $stop_map[$schedule->relationships->stop->data->id];
       $build["table-$route-" . $schedule->relationships->stop->data->id][$schedule->id]['arrival_time']['#plain_text'] = $schedule->attributes->arrival_time;
