@@ -1,0 +1,7 @@
+# Service definition in YAML.
+services:
+  custom_http_client.client:
+    class: GuzzleHttp\Client
+    factory: custom_http_client.client.factory:get
+  custom_http_client.client.factory:
+    class: Drupal\custom_http_client\ClientFactory
