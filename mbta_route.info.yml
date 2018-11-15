@@ -1,0 +1,6 @@
+name: MBTA Route
+type: module
+description: 'Displays routes and their details'
+package: MBTA
+version: 8.x-1.0
+core: 8.x

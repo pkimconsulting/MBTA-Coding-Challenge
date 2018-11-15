@@ -1,0 +1,14 @@
+mbta_route.routes:
+  path: '/routes'
+  defaults:
+    _title: 'MBTA Routes'
+    _controller: '\Drupal\mbta_route\Controller\MBTAController::showRoutes'
+  requirements: 
+    _permission: 'access content' 
+mbta_route.route:
+  path: '/routes/{route}'
+  defaults:
+    _controller: '\Drupal\mbta_route\Controller\MBTAController::showRoute'
+    _title_callback: '\Drupal\mbta_route\Controller\MBTAController::getRouteTitle'
+  requirements:
+    _permission: 'access content'
